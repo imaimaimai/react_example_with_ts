@@ -16,6 +16,8 @@ export default function TaskOutput(props: Props) {
 
   const [todos, setTodo] = useState(initialState)
 
+  
+
   function handleRemoveTask(index: number) {
     const newTodos = [...props]
     newTodos.splice(index,1)

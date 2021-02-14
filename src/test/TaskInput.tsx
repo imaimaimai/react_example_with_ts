@@ -8,7 +8,11 @@ export default function TaskInput() {
   const [todos, setTodo] = useState([{
     task: 'Learn React',
     isCompleted: false
-  }]);
+  },
+    {
+      task: 'お腹減った',
+      isCompleted: false
+    }]);
 
   useEffect(() => {
     document.title = `Your latest task is ${text}`
@@ -16,7 +20,6 @@ export default function TaskInput() {
 
   function handleClick(e:React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    
     setTodo([...todos, {
       task: text.toUpperCase(),
       isCompleted: false
